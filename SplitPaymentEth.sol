@@ -70,6 +70,7 @@ contract DonationEth {
     }
 
     function getTotalDonation() public view returns (uint256) {
+        require(between[msg.sender]);
         return totalDonated;
     }
 
